@@ -254,20 +254,21 @@ function deleteAllRows()
     // save the to-do list
     saveToDoList();
 }
-alert('ok for now ');
-window.addEventListener("batterystatus", onBatteryStatus, false);
+
+/*window.addEventListener("batterystatus", onBatteryStatus, false);
 
 function onBatteryStatus(info) {
     // Handle the online event
     alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
-
+*/
 
 var battery = new BatteryStatusEventSource();
 
 battery.addEventListener('batterystatus', function (event) {
   alert(event.level);
 }, false);
+alert('ok for now ');
 </script>
     </head>
 <body onload="loadToDoList()">

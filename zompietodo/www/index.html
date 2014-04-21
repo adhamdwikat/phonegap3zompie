@@ -258,7 +258,7 @@ window.addEventListener("batterystatus", onBatteryStatus, false);
 
 function onBatteryStatus(info) {
     // Handle the online event
-    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+    alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
 
 </script>
@@ -270,7 +270,7 @@ function onBatteryStatus(info) {
     <button type="button" class="addToDo" onclick="createNewToDo()"><img src="img/button_addtodo.png" /></button>
 <button type="button" class="removeTasks" onclick="removeCompletedTasks()"><img src="img/button_removetasks.png" /></button>
 </div>
-    <br/><br/>
+    <br/><br/><br/><br/>
     <table id="dataTable" width="100%" border="1">
  
     </table>

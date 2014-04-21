@@ -261,6 +261,12 @@ function onBatteryStatus(info) {
     alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
 
+
+var battery = new BatteryStatusEventSource();
+alert('ok for now ');
+battery.addEventListener('batterystatus', function (event) {
+  alert(event.level);
+}, false);
 </script>
     </head>
 <body onload="loadToDoList()">

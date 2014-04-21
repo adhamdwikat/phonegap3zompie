@@ -254,14 +254,13 @@ function deleteAllRows()
     // save the to-do list
     saveToDoList();
 }
-
 window.addEventListener("batterystatus", onBatteryStatus, false);
 
 function onBatteryStatus(info) {
     // Handle the online event
     console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
-	document.getDocumentById("butterystatus_div").innerHTML="Level: " + info.level + " isPlugged: " + info.isPlugged;
 }
+
 </script>
     </head>
 <body onload="loadToDoList()">

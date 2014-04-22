@@ -255,11 +255,24 @@ function deleteAllRows()
     saveToDoList();
 }
 
-window.addEventListener("batterystatus", onBatteryStatus, false);
+var onDeviceReady = function() {
+           //listen for battery events
+           // window.addEventListener("batterycritical", battCrit, false);
+          // window.addEventListener("batterylow", battLow, false);
+           // window.addEventListener("batterystatus", battStat, false);
+			window.addEventListener("batterystatus", onBatteryStatus, false);
+};
+
+ function init() {
+ document.addEventListener("deviceready", onDeviceReady, true);
+            alert('device is ready');
+} 
+
+
 
 function onBatteryStatus(info) {
     // Handle the online event
-	alert('aha');
+	alert('onBatteryStatus');
     alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
 
@@ -272,7 +285,7 @@ battery.addEventListener('batterystatus', function (event) {
 alert('ok for now ');
 </script>
     </head>
-<body onload="loadToDoList()">
+<body onload="loadToDoList();init();alert('onload func');">
 <img src="img/header.png" width="100%" /><br><br>
 <div id='butterystatus_div'>Battery NNNN</div>
 <div>

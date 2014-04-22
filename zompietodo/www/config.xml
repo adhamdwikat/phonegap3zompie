@@ -21,7 +21,7 @@
         The "device" permission is required for the 'deviceready' event.
     -->
     <feature name="http://api.phonegap.com/1.0/device" />
-    <feature name="http://api.phonegap.com/1.0/battery" />
+   
 
     <!--
         If you do not want any permissions to be added to your app, add the
@@ -59,6 +59,11 @@
 
     <!-- Plugins can also be added here. -->
 	<gap:plugin name="org.apache.cordova.battery-status" version="0.2.7" />
+	<gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+	<gap:plugin name="org.apache.cordova.camera" version="0.2.4" />
+	<gap:plugin name="org.apache.cordova.globalization" version="0.2.6" />
+	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
+	<gap:plugin name="org.apache.cordova.splashscreen" version="0.2.7" />
     <!--   version="0.2.4"
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins

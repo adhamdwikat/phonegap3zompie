@@ -259,15 +259,16 @@ window.addEventListener("batterystatus", onBatteryStatus, false);
 
 function onBatteryStatus(info) {
     // Handle the online event
+	alert('aha');
     alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
 
 
-var battery = new BatteryStatusEventSource();
+/*var battery = new BatteryStatusEventSource();
 
 battery.addEventListener('batterystatus', function (event) {
   alert(event.level);
-}, false);
+}, false);*/
 alert('ok for now ');
 </script>
     </head>

@@ -262,9 +262,9 @@ var onDeviceReady = function() {
           // window.addEventListener("batterylow", battLow, false);
            // window.addEventListener("batterystatus", battStat, false);
 			
-			window.addEventListener("menubutton", onMenuKeyDown, false);
-			window.addEventListener("backbutton", onBackKeyDown, false);
-			window.addEventListener("batterystatus", onBatteryStatus, false);
+			document.addEventListener("menubutton", onMenuKeyDown, false);
+			document.addEventListener("backbutton", onBackKeyDown, false);
+			document.addEventListener("batterystatus", onBatteryStatus, false);
 			alert('end of onDeviceReady');
 
 };

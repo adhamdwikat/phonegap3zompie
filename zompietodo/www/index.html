@@ -261,9 +261,11 @@ var onDeviceReady = function() {
            // window.addEventListener("batterycritical", battCrit, false);
           // window.addEventListener("batterylow", battLow, false);
            // window.addEventListener("batterystatus", battStat, false);
-			window.addEventListener("batterystatus", onBatteryStatus, false);
+			
 			document.addEventListener("menubutton", onMenuKeyDown, false);
-
+			document.addEventListener("backbutton", onBackKeyDown, false);
+			window.addEventListener("batterystatus", onBatteryStatus, false);
+			alert('end of onDeviceReady');
 
 };
 
@@ -282,6 +284,11 @@ function onBatteryStatus(info) {
     alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
 
+
+function onBackKeyDown() {
+alert('back is clicked');
+    // Handle the back button
+}
 
 /*var battery = new BatteryStatusEventSource();
 

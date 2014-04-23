@@ -261,10 +261,12 @@ var onDeviceReady = function() {
            // window.addEventListener("batterycritical", battCrit, false);
           // window.addEventListener("batterylow", battLow, false);
            // window.addEventListener("batterystatus", battStat, false);
-			
+			alert('before line 1');
 			document.addEventListener("menubutton", onMenuKeyDown, false);
+			alert('before line 2');
 			document.addEventListener("backbutton", onBackKeyDown, false);
-			document.addEventListener("batterystatus", onBatteryStatus, false);
+			alert('before line 3');
+			window.addEventListener("batterystatus", onBatteryStatus, false);
 			alert('end of onDeviceReady');
 
 };
@@ -286,7 +288,10 @@ function onBatteryStatus(info) {
 
 
 function onBackKeyDown() {
-alert('back is clicked');
+//alert('back is clicked');
+if(confirm('are you sure you want exit')){
+navigator.app.exitApp();
+}
     // Handle the back button
 }
 
